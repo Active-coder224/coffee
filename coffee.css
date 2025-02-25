@@ -1,205 +1,558 @@
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 
-.header{
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 90;
+}
+
+.header .logo {
+  font-size: 1.2em;
+  color: #ecf1e8;
+  text-decoration: none;
+}
+
+.header .nav a {
+  position: relative;
+  font-size: 1.1em;
+  color: #ecf1e8;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.header .nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #ecf1e8;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.header .nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("img/coffee-171653_1920.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px 0;
+}
+
+.home .content {
+  max-width: 600px;
+  color: #ecf1e8;
+}
+
+.content h2 {
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+}
+
+.content p {
+  margin: 10px 0 40px;
+}
+
+.content a {
+  color: #ecf1e8;
+  text-decoration: none;
+  border: 2px solid #000;
+  padding: 10px 40px;
+  border-radius: 40px;
+  transition: 0.5s ease;
+}
+
+.content a:hover {
+  background: #a0a37a;
+}
+
+.home .wrapper-login {
+  position: relative;
+  width: 440px;
+}
+
+.wrapper-login h2 {
+  font-size: 2em;
+  color: #ecf1e8;
+  text-align: center;
+}
+
+.wrapper-login .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 40px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid #ecf1e8;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1em;
+  color: #ecf1e8;
+  padding: 0 25px 0 45px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #ecf1e8;
+  pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  font-size: 0.8em;
+  top: -14px;
+  left: 17px;
+}
+
+.input-box .icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-size: 1.2em;
+  color: #ecf1e8;
+}
+
+.wrapper-login .remember-forget {
+  font-size: 0.9em;
+  color: #ecf1e8;
+  font-weight: 500;
+  margin: -25px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forget label input {
+  accent-color: #1e0b04;
+  margin-right: 3px;
+}
+
+.remember-forget a {
+  color: #ecf1e8;
+  text-decoration: none;
+}
+
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+
+.wrapper-login .btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #1e0b04, #71412a);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 1em;
+  color: #ecf1e8;
+  font-weight: 500;
+}
+
+.wrapper-login .register-link {
+  font-size: 0.9em;
+  color: #ecf1e8;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.register-link p {
+  margin: 10px 0;
+}
+
+.register-link p a {
+  color: #ecf1e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header .nav {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10px;
-    background-color: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 90;
-}
-
-.header .logo{
-    font-size: 1.2em;
-    color: #ecf1e8;
-    text-decoration: none;
-}
-
-.header .nav a{
-    position: relative;
-    font-size: 1.1em;
-    color: #ecf1e8;
-    text-decoration: none;
-    margin-left: 40px;
-}
-
-.header .nav a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #ecf1e8;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: .5s;
-}
-
-
-.header .nav a:hover::after{
-    transform: scaleX(1);
-}
-
-.home{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url("img/coffee-171653_1920.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 100px 0;
-}
-
-.home .content{
-    max-width: 600px;
-    color: #ecf1e8;
-}
-
-.content h2{
-    font-size: 3rem;
-    letter-spacing: .03em;
-}
-
-
-.content p{
-    margin: 10px 0 40px;
-}
-
-
-.content a{
-    color: #ecf1e8;
-    text-decoration: none;
-    border: 2px solid #000;
-    padding: 10px 40px;
-    border-radius: 40px;
-    transition: .5s ease;
-}
-
-
-.content a:hover{
-    background: #a0a37a;
-}
-
-.home .wrapper-login{
-    position: relative;
-    width: 440px;
-}
-
-.wrapper-login h2{
-    font-size: 2em;
-    color: #ecf1e8;
-    text-align: center;
-}
-
-.wrapper-login .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 40px 0;
-}
-
-.input-box input{
+    left: -100%;
     width: 100%;
     height: 100%;
-    background: transparent;
-    border: 1px solid #ecf1e8;
-    outline: none;
-    border-radius: 40px;
-    font-size: 1em;
-    color: #ecf1e8;
-    padding: 0 25px 0 45px;
-}
-
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 45px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #ecf1e8;
-    pointer-events: none;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label{
-    font-size: .8em;
-    top: -14px;
-    left: 17px;
-}
-
-.input-box .icon{
-    position: absolute;
-    top: 14px;
-    left: 15px;
-    font-size: 1.2em;
-    color: #ecf1e8;
-}
-
-.wrapper-login .remember-forget{
-    font-size: .9em;
-    color: #ecf1e8;
-    font-weight: 500;
-    margin: -25px 0 15px;
+    background: #1e0b04;
     display: flex;
-    justify-content: space-between;
-}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
 
-.remember-forget label input{
-    accent-color: #1e0b04;
-    margin-right: 3px;
-}
+  .header .nav.active {
+    left: 0;
+  }
 
-.remember-forget a{
-    color: #ecf1e8;
-    text-decoration: none;
-}
+  .header .nav a {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
 
-.remember-forget a:hover{
-    text-decoration: underline;
-}
+  .home {
+    padding: 80px 20px 0;
+  }
 
-.wrapper-login .btn{
+  .home .content {
+    max-width: 100%;
+  }
+
+  .wrapper-login {
     width: 100%;
-    height: 50px;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    background: linear-gradient(90deg, #1e0b04, #71412a);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
-    cursor: pointer;
+  }
+
+  .wrapper-login h2 {
+    font-size: 1.5em;
+  }
+
+  .input-box input {
+    font-size: 0.8em;
+  }
+
+  .input-box label {
+    font-size: 0.8em;
+  }
+
+  .remember-forget {
+    font-size: 0.8em;
+  }
+
+  .remember-forget a {
+    font-size: 0.8em;
+  }
+
+  .wrapper-login .btn {
+    font-size: 0.8em;
+  }
+
+  .register-link {
+    font-size: 0.8em;
+  }
+
+  .register-link p {
+    font-size: 0.8em;
+  }
+
+  .register-link p a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login {
+    width: 100%;
+  }
+
+  .home .wrapper-login h2 {
+    font-size: 1.5em;
+  }
+
+  .home .wrapper-login .input-box input {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .input-box label {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .remember-forget {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .remember-forget a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .btn {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .input-box .icon {
     font-size: 1em;
-    color: #ecf1e8;
-    font-weight: 500;
-}
+  }
 
-.wrapper-login .register-link{
-    font-size: .9em;
-    color: #ecf1e8;
-    text-align: center;
-    margin: 30px 0;
-}
+  .home .wrapper-login .remember-forget label {
+    font-size: 0.8em;
+  }
 
-.register-link p a{
-    color: #ecf1e8;
-    text-decoration: none;
-    font-weight: 600;
-}
+  .home .wrapper-login .remember-forget label input {
+    margin-right: 3px;
+  }
 
-.register-link p a:hover{
+  .home .wrapper-login .remember-forget a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p a:hover {
     text-decoration: underline;
+  }
+
+  .home .wrapper-login .register-link p {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .btn {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .input-box input {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .header .nav a {
+    font-size: 1em;
+    margin-left: 20px;
+  }
+
+  .home .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .home .content p {
+    margin: 10px 0 30px;
+  }
+
+  .home .content a {
+    padding: 10px 30px;
+  }
+
+  .home .wrapper-login h2 {
+    font-size: 1.5em;
+  }
+
+  .wrapper-login .input-box {
+    margin: 30px 0;
+  }
+
+  .input-box input {
+    font-size: 0.8em;
+  }
+
+  .input-box label {
+    font-size: 0.8em;
+  }
+
+  .remember-forget {
+    font-size: 0.8em;
+  }
+
+  .remember-forget a {
+    font-size: 0.8em;
+  }
+
+  .wrapper-login .btn {
+    font-size: 0.8em;
+  }
+
+  .register-link {
+    font-size: 0.8em;
+  }
+
+  .register-link p {
+    font-size: 0.8em;
+  }
+
+  .register-link p a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login h2 {
+    font-size: 1.5em;
+  }
+
+  .home .wrapper-login .input-box {
+    margin: 30px 0;
+  }
+
+  .home .wrapper-login .input-box input {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .input-box label {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .remember-forget {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .remember-forget a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .btn {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .register-link p a {
+    font-size: 0.8em;
+  }
+
+  .home .wrapper-login .input-box .icon {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header .nav a {
+    font-size: 1.2em;
+    margin-left: 40px;
+  }
+
+  .home .content h2 {
+    font-size: 3rem;
+  }
+
+  .home .content p {
+    margin: 10px 0 40px;
+  }
+
+  .home .content a {
+    padding: 10px 40px;
+  }
+
+  .home .wrapper-login h2 {
+    font-size: 2em;
+  }
+
+  .wrapper-login .input-box {
+    margin: 40px 0;
+  }
+
+  .input-box input {
+    font-size: 1em;
+  }
+
+  .input-box label {
+    font-size: 1em;
+  }
+
+  .remember-forget {
+    font-size: 0.9em;
+  }
+
+  .remember-forget a {
+    font-size: 0.9em;
+  }
+
+  .wrapper-login .btn {
+    font-size: 1em;
+  }
+
+  .register-link {
+    font-size: 0.9em;
+  }
+
+  .register-link p {
+    font-size: 0.9em;
+  }
+
+  .register-link p a {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login h2 {
+    font-size: 2em;
+  }
+
+  .home .wrapper-login .input-box {
+    margin: 40px 0;
+  }
+
+  .home .wrapper-login .input-box input {
+    font-size: 1em;
+  }
+
+  .home .wrapper-login .input-box label {
+    font-size: 1em;
+  }
+
+  .home .wrapper-login .remember-forget {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login .remember-forget a {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login .btn {
+    font-size: 1em;
+  }
+
+  .home .wrapper-login .register-link {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login .register-link p {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login .register-link p a {
+    font-size: 0.9em;
+  }
+
+  .home .wrapper-login .input-box .icon {
+    font-size: 1.2em;
+  }
 }
