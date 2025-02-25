@@ -9,6 +9,7 @@
   <body>
     <header id="header" class="header">
       <a href="#" class="logo"> <ion-icon name="cafe"></ion-icon>Coffe</a>
+      <button class="menu-toggle">☰</button>
       <nav id="nav" class="nav">
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -65,5 +66,10 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector(".header").classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

@@ -202,357 +202,126 @@
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .header .nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #1e0b04;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-  }
-
-  .header .nav.active {
-    left: 0;
-  }
-
-  .header .nav a {
-    font-size: 1.5em;
-    margin: 20px 0;
-  }
-
+/* Mobile Responsive Media Queries */
+@media (max-width: 1200px) {
   .home {
-    padding: 80px 20px 0;
+    padding: 80px 50px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    padding: 120px 30px 0;
+    text-align: center;
   }
 
-  .home .content {
-    max-width: 100%;
+  .content {
+    margin-bottom: 40px;
   }
 
-  .wrapper-login {
-    width: 100%;
-  }
-
-  .wrapper-login h2 {
-    font-size: 1.5em;
-  }
-
-  .input-box input {
-    font-size: 0.8em;
-  }
-
-  .input-box label {
-    font-size: 0.8em;
-  }
-
-  .remember-forget {
-    font-size: 0.8em;
-  }
-
-  .remember-forget a {
-    font-size: 0.8em;
-  }
-
-  .wrapper-login .btn {
-    font-size: 0.8em;
-  }
-
-  .register-link {
-    font-size: 0.8em;
-  }
-
-  .register-link p {
-    font-size: 0.8em;
-  }
-
-  .register-link p a {
-    font-size: 0.8em;
+  .content h2 {
+    font-size: 2.5rem;
   }
 
   .home .wrapper-login {
     width: 100%;
-  }
-
-  .home .wrapper-login h2 {
-    font-size: 1.5em;
-  }
-
-  .home .wrapper-login .input-box input {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .input-box label {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .remember-forget {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .remember-forget a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .btn {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .input-box .icon {
-    font-size: 1em;
-  }
-
-  .home .wrapper-login .remember-forget label {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .remember-forget label input {
-    margin-right: 3px;
-  }
-
-  .home .wrapper-login .remember-forget a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p a:hover {
-    text-decoration: underline;
-  }
-
-  .home .wrapper-login .register-link p {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .btn {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .input-box input {
-    font-size: 0.8em;
+    max-width: 500px;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
-  .header .nav a {
-    font-size: 1em;
-    margin-left: 20px;
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
   }
 
-  .home .content h2 {
-    font-size: 2.5rem;
+  .header .nav {
+    display: none;
   }
 
-  .home .content p {
-    margin: 10px 0 30px;
+  .home {
+    padding: 100px 20px 0;
   }
 
-  .home .content a {
-    padding: 10px 30px;
+  .content h2 {
+    font-size: 2rem;
   }
 
-  .home .wrapper-login h2 {
-    font-size: 1.5em;
+  .content p {
+    font-size: 0.9rem;
   }
 
-  .wrapper-login .input-box {
+  .wrapper-login {
+    padding: 20px;
+  }
+
+  .input-box {
     margin: 30px 0;
-  }
-
-  .input-box input {
-    font-size: 0.8em;
-  }
-
-  .input-box label {
-    font-size: 0.8em;
   }
 
   .remember-forget {
-    font-size: 0.8em;
-  }
-
-  .remember-forget a {
-    font-size: 0.8em;
-  }
-
-  .wrapper-login .btn {
-    font-size: 0.8em;
-  }
-
-  .register-link {
-    font-size: 0.8em;
-  }
-
-  .register-link p {
-    font-size: 0.8em;
-  }
-
-  .register-link p a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login h2 {
-    font-size: 1.5em;
-  }
-
-  .home .wrapper-login .input-box {
-    margin: 30px 0;
-  }
-
-  .home .wrapper-login .input-box input {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .input-box label {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .remember-forget {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .remember-forget a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .btn {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .register-link p a {
-    font-size: 0.8em;
-  }
-
-  .home .wrapper-login .input-box .icon {
-    font-size: 1em;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .header .nav a {
-    font-size: 1.2em;
-    margin-left: 40px;
+@media (max-width: 480px) {
+  .home {
+    padding: 80px 15px 0;
   }
 
-  .home .content h2 {
-    font-size: 3rem;
+  .content h2 {
+    font-size: 1.8rem;
   }
 
-  .home .content p {
-    margin: 10px 0 40px;
-  }
-
-  .home .content a {
-    padding: 10px 40px;
-  }
-
-  .home .wrapper-login h2 {
-    font-size: 2em;
-  }
-
-  .wrapper-login .input-box {
-    margin: 40px 0;
+  .content a {
+    padding: 8px 30px;
   }
 
   .input-box input {
-    font-size: 1em;
+    padding: 0 20px 0 40px;
   }
 
   .input-box label {
-    font-size: 1em;
+    left: 40px;
   }
 
-  .remember-forget {
-    font-size: 0.9em;
-  }
-
-  .remember-forget a {
-    font-size: 0.9em;
+  .input-box .icon {
+    left: 12px;
   }
 
   .wrapper-login .btn {
-    font-size: 1em;
+    height: 45px;
+    font-size: 0.9rem;
   }
 
   .register-link {
-    font-size: 0.9em;
+    margin: 25px 0;
+  }
+}
+
+/* Mobile Menu Toggle (Add this HTML button) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #ecf1e8;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
-  .register-link p {
-    font-size: 0.9em;
+  .header.active .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
   }
 
-  .register-link p a {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login h2 {
-    font-size: 2em;
-  }
-
-  .home .wrapper-login .input-box {
-    margin: 40px 0;
-  }
-
-  .home .wrapper-login .input-box input {
-    font-size: 1em;
-  }
-
-  .home .wrapper-login .input-box label {
-    font-size: 1em;
-  }
-
-  .home .wrapper-login .remember-forget {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login .remember-forget a {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login .btn {
-    font-size: 1em;
-  }
-
-  .home .wrapper-login .register-link {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login .register-link p {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login .register-link p a {
-    font-size: 0.9em;
-  }
-
-  .home .wrapper-login .input-box .icon {
-    font-size: 1.2em;
+  .header.active .nav a {
+    margin: 10px 0;
   }
 }
